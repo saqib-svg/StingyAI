@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloud Bill Agent | Autonomous Cloud Cost Optimization</title>
+
+  <!-- Google Fonts: Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+  <div class="app-container">
+
+    <!-- HEADER BAR -->
+    <header class="header">
+      <div class="header-brand">
+        <div class="brand-icon">⚡</div>
+        <div>
+          <h1 class="header-title">Cloud Bill Agent</h1>
+          <p class="header-subtitle">Autonomous Cloud Cost Optimization Control Center</p>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <div class="status-badge live">
+          <span class="pulse-dot"></span>
+          <span>AI AGENT ONLINE</span>
+        </div>
+
+        <button id="btn-refresh" class="btn btn-secondary" onclick="fetchServices()">
+          <span class="icon">🔄</span> Refresh Environment
+        </button>
+
+        <button id="btn-reset" class="btn btn-danger-outline" onclick="resetDemoEnvironment()">
+          <span class="icon">⚠️</span> Reset Demo Environment
+        </button>
+      </div>
+    </header>
+
+    <!-- MAIN DASHBOARD CONTENT -->
+    <main class="dashboard-grid">
+
+      <!-- LEFT COLUMN: Environment & Controls -->
+      <section class="left-panel">
+
+        <!-- CLOUD SERVICES OVERVIEW -->
+        <div class="card">
+          <div class="card-header">
+            <h2 class="card-title"><span class="icon">☁️</span> Cloud Environment Overview</h2>
+            <span class="card-tag">Stateful Simulator</span>
+          </div>
+
+          <div id="services-container" class="services-grid">
+            <!-- Dynamic Service Cards Loaded Here -->
+            <div class="loading-spinner">Loading cloud services...</div>
+          </div>
+        </div>
+
+        <!-- DEMO SCENARIOS PRESETS -->
+        <div class="card margin-top">
+          <div class="card-header">
+            <h2 class="card-title"><span class="icon">🎯</span> Hackathon Evaluation Scenarios</h2>
+            <span class="card-tag">Preset Requests</span>
+          </div>
+          
+          <div class="scenarios-grid">
+            <button class="btn btn-preset" onclick="selectScenario('A')">
+              <strong>Scenario A</strong>
+              <span>Review & reduce cost safely</span>
+            </button>
+            <button class="btn btn-preset" onclick="selectScenario('B')">
+              <strong>Scenario B</strong>
+              <span>Traffic spike capacity scaling</span>
+            </button>
+            <button class="btn btn-preset" onclick="selectScenario('C')">
+              <strong>Scenario C</strong>
+              <span>Stale vs Recent traffic check</span>
+            </button>
+            <button class="btn btn-preset" onclick="selectScenario('D')">
+              <strong>Scenario D</strong>
+              <span>Acknowledge previous failed action</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- AGENT NATURAL LANGUAGE CONTROL -->
+        <div class="card margin-top glow-border">
+          <div class="card-header">
+            <h2 class="card-title"><span class="icon">🤖</span> Tell the Agent What to Do</h2>
+            <span class="card-tag highlight">Hugging Face Hosted Agent</span>
+          </div>
+
+          <div class="form-group">
+            <label for="agent-input" class="form-label">Natural Language Optimization Request:</label>
+            <textarea id="agent-input" class="form-control" rows="3" placeholder="Review current services and reduce unnecessary cost without breaking latency or availability requirements."></textarea>
+          </div>
+
+          <button id="btn-run-agent" class="btn btn-primary btn-block" onclick="runAgent()">
+            <span id="run-btn-icon" class="icon">🚀</span>
+            <span id="run-btn-text">RUN AGENT WORKFLOW</span>
+          </button>
+        </div>
+
+      </section>
+
+      <!-- RIGHT COLUMN: Agent Execution Results -->
+      <section class="right-panel">
+
+        <!-- WELCOME PLACEHOLDER (BEFORE RUN) -->
+        <div id="results-placeholder" class="card placeholder-card">
+          <div class="placeholder-icon">🔍</div>
+          <h3>Ready for Agent Execution</h3>
+          <p>Select a scenario above or enter a custom request, then click <strong>RUN AGENT WORKFLOW</strong> to observe autonomous investigation, safety checks, execution, and verification.</p>
+        </div>
+
+        <!-- ACTIVE RESULTS CONTAINER -->
+        <div id="results-container" class="hidden">
+
+          <!-- RUN SUMMARY BAR -->
+          <div class="card summary-card">
+            <div class="summary-grid">
+              <div class="summary-item">
+                <span class="summary-label">Run ID</span>
+                <span id="res-run-id" class="summary-value code">run-000000</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">Execution Status</span>
+                <span id="res-status-badge" class="badge badge-success">COMPLETED</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">Initial Cost</span>
+                <span id="res-cost-initial" class="summary-value">$0.00/hr</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">Final Cost</span>
+                <span id="res-cost-final" class="summary-value">$0.00/hr</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">Hourly Savings</span>
+                <span id="res-cost-savings" class="summary-value highlight-green">$0.00/hr</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- REJECTION / FAILURE ALERT BANNER -->
+          <div id="alert-container" class="hidden alert-box">
+            <!-- Dynamic Alert Message -->
+          </div>
+
+          <!-- EXECUTION TRACE TIMELINE -->
+          <div class="card margin-top">
+            <div class="card-header">
+              <h2 class="card-title"><span class="icon">📜</span> Live Execution Trace</h2>
+              <span class="card-tag" id="trace-header-tag">Investigate → Decide → Act → Verify → Finish</span>
+            </div>
+
+            <div id="trace-container" class="timeline">
+              <!-- Dynamic Trace Cards -->
+            </div>
+          </div>
+
+          <!-- OPTIMIZATION IMPACT COMPARISON MATRIX -->
+          <div class="card margin-top">
+            <div class="card-header">
+              <h2 class="card-title"><span class="icon">📊</span> Optimization Impact (Before / After)</h2>
+              <span class="card-tag">Fresh State Verification</span>
+            </div>
+
+            <div id="comparison-container" class="table-responsive">
+              <!-- Dynamic Comparison Table -->
+            </div>
+          </div>
+
+          <!-- FINAL RESPONSE EXPLANATION -->
+          <div class="card margin-top">
+            <div class="card-header">
+              <h2 class="card-title"><span class="icon">💬</span> Agent Final Explanation</h2>
+            </div>
+            <div id="final-response-box" class="final-response-content">
+              <!-- Agent text explanation -->
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>Cloud Bill Agent &copy; 2026 | Hackathon Step 6 Evaluator Dashboard | Powered by FastAPI & Hugging Face Hosted Inference API</p>
+    </footer>
+
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
