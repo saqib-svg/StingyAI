@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {"darkMode":"class","theme":{"extend":{"colors":{"on-error":"#690005","secondary-container":"#2f3aa3","on-primary-fixed":"#001f26","inverse-primary":"#00687a","primary":"#4cd7f6","on-background":"#dfe2ef","on-secondary-fixed-variant":"#2f3aa3","primary-fixed":"#acedff","on-tertiary":"#003824","surface-container-high":"#262a34","secondary-fixed":"#e0e0ff","on-tertiary-fixed":"#002113","outline":"#869397","inverse-surface":"#dfe2ef","background":"#0f131c","surface-container-highest":"#31353f","error-container":"#93000a","tertiary-fixed-dim":"#4edea3","tertiary-fixed":"#6ffbbe","on-secondary-container":"#a8afff","primary-fixed-dim":"#4cd7f6","surface-container-low":"#181b25","on-secondary":"#131e8c","surface-tint":"#4cd7f6","surface":"#0f131c","on-primary-fixed-variant":"#004e5c","outline-variant":"#3d494c","on-primary":"#003640","on-secondary-fixed":"#000767","on-surface":"#dfe2ef","on-tertiary-fixed-variant":"#005236","on-primary-container":"#00424f","on-surface-variant":"#bcc9cd","surface-variant":"#31353f","on-error-container":"#ffdad6","surface-dim":"#0f131c","error":"#ffb4ab","tertiary-container":"#1bbd85","surface-container":"#1c1f29","on-tertiary-container":"#00452e","inverse-on-surface":"#2c303a","tertiary":"#4edea3","secondary-fixed-dim":"#bdc2ff","surface-bright":"#353943","primary-container":"#06b6d4","secondary":"#bdc2ff","surface-container-lowest":"#0a0e17"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-xl":"1.5rem","gutter":"0.75rem","space-md":"0.75rem","space-lg":"1rem","margin":"1rem","margin-desktop":"1.5rem","space-sm":"0.5rem","gutter-desktop":"1rem","space-xs":"0.25rem"},"fontFamily":{"body-lg":["Geist"],"body-sm":["Geist"],"label-lg":["JetBrains Mono"],"label-sm":["JetBrains Mono"],"headline-xl":["Space Grotesk"],"headline-sm":["Space Grotesk"],"label-md":["JetBrains Mono"],"headline-md":["Space Grotesk"],"headline-xl-mobile":["Space Grotesk"],"body-md":["Geist"],"headline-lg":["Space Grotesk"]},"fontSize":{"body-lg":["15px",{"lineHeight":"22px","fontWeight":"400"}],"body-sm":["11px",{"lineHeight":"16px","fontWeight":"400"}],"label-lg":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"600"}],"label-sm":["10px",{"lineHeight":"12px","letterSpacing":"0.05em","fontWeight":"400"}],"headline-xl":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-sm":["15px",{"lineHeight":"20px","fontWeight":"500"}],"label-md":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"500"}],"headline-md":["18px",{"lineHeight":"24px","fontWeight":"500"}],"headline-xl-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["13px",{"lineHeight":"18px","fontWeight":"400"}],"headline-lg":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-low/95 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-16 w-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg shrink-0"><div class="flex items-center gap-space-md"><div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shadow-[0_0_12px_1px_rgba(6,182,212,0.25)]"><span class="material-symbols-outlined text-[20px]">hub</span></div><div class="flex flex-col"><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">CLOUD BILL AGENT</span></div><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">AUTONOMOUS CLOUD COST OPTIMIZATION</span></div></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-surface-container-high"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span></span><span class="font-label-sm text-label-sm text-tertiary uppercase">AGENT ONLINE</span></div></div><div class="hidden md:flex items-center gap-space-sm px-space-md py-1 rounded bg-surface-container-lowest"><span class="material-symbols-outlined text-primary text-[15px]">cloud_done</span><span class="font-label-md text-label-md text-on-surface">SIMULATED CLOUD ENVIRONMENT</span><span class="font-label-sm text-label-sm text-outline">(AWS / K8s cluster us-east-1)</span></div><div class="flex items-center gap-space-sm shrink-0"><div class="hidden lg:flex items-center gap-space-md px-space-sm py-1 rounded bg-surface-container-lowest font-label-sm text-label-sm"><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-tertiary text-[14px]">speed</span><span>14ms</span></div><span class="text-outline-variant">|</span><div class="flex items-center gap-space-xs text-on-surface"><span class="material-symbols-outlined text-outline text-[14px]">schedule</span><span>10:30:42 UTC</span></div></div><div class="flex items-center gap-space-xs"><button class="flex items-center gap-space-xs px-space-sm py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" type="button"><span class="material-symbols-outlined text-[14px]">refresh</span><span class="hidden sm:inline">Refresh</span></button><button class="flex items-center gap-space-xs px-space-sm py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" type="button"><span class="material-symbols-outlined text-[14px]">restart_alt</span><span class="hidden sm:inline">Reset Demo</span></button></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-low z-40 flex flex-col pt-space-md pb-space-lg"><div class="px-space-md mb-space-sm"><span class="font-label-sm text-label-sm text-outline uppercase">Console Navigation</span></div><nav class="flex-1 px-space-sm space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2 transition-colors bg-primary-container text-on-primary-container font-semibold rounded" data-path="autonomous-overview" href="#"><span class="material-symbols-outlined text-[18px]">monitoring</span><span>Autonomous Overview</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="cost-anomalies" href="#"><span class="material-symbols-outlined text-[18px]">warning</span><span>Cost Anomalies</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="execution-audit" href="#"><span class="material-symbols-outlined text-[18px]">terminal</span><span>Execution Audit</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="guardrail-policies" href="#"><span class="material-symbols-outlined text-[18px]">shield</span><span>Guardrail Policies</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="cluster-topology" href="#"><span class="material-symbols-outlined text-[18px]">account_tree</span><span>Cluster Topology</span></a></nav><div class="px-space-sm pt-space-sm"><div class="p-space-sm rounded bg-surface-container-lowest"><div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant mb-1"><span>Spend Velocity</span><span class="text-tertiary">-34.2%</span></div><div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden"><div class="bg-tertiary h-full w-2/3"></div></div></div></div></aside><div class="pl-64"><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<!-- Interactive State Scripts and Demo Switcher logic embedded -->
+<div class="p-space-lg space-y-space-lg max-w-[1600px] mx-auto w-full">
+<!-- TOP AGENT CONTROL & EXECUTION BAR -->
+<section class="bg-surface-container-low rounded-xl p-space-md shadow-xl flex flex-col gap-space-md">
+<!-- Upper Section: NL Prompt + Scenario Pickers + Execution Button -->
+<div class="flex flex-col xl:flex-row items-stretch xl:items-center justify-between gap-space-md">
+<!-- Natural Language Directive Input Box -->
+<div class="flex-1 bg-surface-container-lowest rounded-lg px-space-md py-2 flex items-center gap-space-sm shadow-sm">
+<div class="flex items-center gap-space-xs text-primary shrink-0">
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+<span class="font-label-sm text-label-sm text-primary uppercase font-semibold">Directive:</span>
+</div>
+<input class="w-full bg-transparent text-on-surface font-body-md text-body-md focus:outline-none placeholder:text-outline" id="agent-prompt-input" placeholder="Instruct the agent on cost/cluster optimization goals..." type="text" value="Review current services and reduce unnecessary cost without breaking latency or availability requirements."/>
+<button class="text-outline hover:text-primary transition-colors shrink-0" onclick="resetPrompt()" type="button">
+<span class="material-symbols-outlined text-[16px]">clear</span>
+</button>
+</div>
+<!-- Scenario Pills and Action Controls -->
+<div class="flex flex-wrap items-center gap-space-sm shrink-0">
+<div class="flex items-center gap-space-xs bg-surface-container p-1 rounded-lg">
+<span class="font-label-sm text-label-sm text-outline px-1.5 hidden md:inline">DEMO SCENARIO:</span>
+<button class="px-2.5 py-1 rounded font-label-sm text-label-sm transition-all bg-primary-container text-on-primary-container font-semibold shadow-[0_0_8px_rgba(6,182,212,0.3)]" id="scenario-btn-A" onclick="setScenario('A')">
+              [A] Review &amp; Reduce
+            </button>
+<button class="px-2.5 py-1 rounded font-label-sm text-label-sm transition-all text-on-surface-variant hover:bg-surface-container-high" id="scenario-btn-B" onclick="setScenario('B')">
+              [B] Traffic Spike
+            </button>
+<button class="px-2.5 py-1 rounded font-label-sm text-label-sm transition-all text-on-surface-variant hover:bg-surface-container-high" id="scenario-btn-C" onclick="setScenario('C')">
+              [C] Stale vs Recent
+            </button>
+<button class="px-2.5 py-1 rounded font-label-sm text-label-sm transition-all text-on-surface-variant hover:bg-surface-container-high" id="scenario-btn-D" onclick="setScenario('D')">
+              [D] Failed Guardrail
+            </button>
+</div>
+<!-- Primary RUN AGENT CTA -->
+<button class="px-space-md py-2 rounded font-label-lg text-label-lg font-bold bg-primary-container text-on-primary-container hover:bg-primary transition-all flex items-center gap-space-xs shadow-[0_0_16px_rgba(6,182,212,0.45)] active:scale-95" id="run-agent-btn" onclick="toggleAgentRun()">
+<span class="material-symbols-outlined text-[18px] animate-spin" id="run-btn-icon">sync</span>
+<span id="run-btn-label">AGENT RUNNING...</span>
+</button>
+</div>
+</div>
+<!-- Live Execution Metadata Strip -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs border-t border-surface-container font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center gap-space-md flex-wrap">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-outline uppercase tracking-wider">Status:</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-tertiary/15 text-tertiary font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+<span id="meta-status">RUNNING / ACTIVE</span>
+</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="text-outline">Run ID:</span>
+<span class="text-primary font-mono bg-surface-container px-1.5 py-0.5 rounded" id="meta-run-id">run-7c21b22c133d</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="text-outline">Iteration:</span>
+<span class="text-on-surface font-semibold" id="meta-iteration">2 / 10</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="text-outline">Current Phase:</span>
+<span class="text-primary-fixed bg-surface-container-high px-1.5 py-0.5 rounded font-bold" id="meta-phase">VERIFY</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md text-outline">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">smart_toy</span>
+<span class="text-on-surface">Claude 3.5 Sonnet</span>
+<span class="text-outline-variant text-[10px]">(Infra Spec)</span>
+</div>
+<span>•</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">gavel</span>
+<span class="text-on-surface">OPA Engine v2.4</span>
+<span class="text-tertiary text-[10px]">(Deterministic)</span>
+</div>
+</div>
+</div>
+</section>
+<!-- CENTERPIECE: AGENT AUTONOMOUS EXECUTION TIMELINE (6 STEPS) -->
+<section class="bg-surface-container-low rounded-xl p-space-md shadow-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">account_tree</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">Autonomous Execution Sequence</h2>
+<span class="font-label-sm text-label-sm text-outline px-2 py-0.5 rounded bg-surface-container">Deterministic Loop [6 Phases]</span>
+</div>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-tertiary"></span> Passed</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-secondary"></span> Adapted</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span> Active Tool</span>
+</div>
+</div>
+<!-- Dynamic 6-Stage Timeline Pipeline Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-6 gap-space-sm">
+<!-- Phase 01: INVESTIGATE -->
+<div class="bg-surface-container rounded-lg p-space-sm flex flex-col justify-between relative group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-label-sm text-label-sm font-semibold text-outline">01 INVESTIGATE</span>
+<span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface mb-2 leading-tight">
+            Inspecting service metrics, cluster traffic, latency &amp; SLO targets.
+          </p>
+<div class="bg-surface-container-lowest rounded p-1.5 font-label-sm text-label-sm text-outline space-y-1">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="text-tertiary">tool:</span>
+<span class="font-mono text-primary truncate max-w-[90px]">get_all_services()</span>
+</div>
+<div class="text-[9px] text-outline text-right">10:30:12 UTC (18ms)</div>
+</div>
+</div>
+<!-- Phase 02: DECIDE -->
+<div class="bg-surface-container rounded-lg p-space-sm flex flex-col justify-between relative group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-label-sm text-label-sm font-semibold text-outline">02 DECIDE</span>
+<span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface mb-2 leading-tight">
+<code class="text-primary font-mono font-semibold">reports-worker</code> has 0 RPM traffic and 4 excess instances.
+          </p>
+<div class="bg-surface-container-lowest rounded p-1.5 font-label-sm text-label-sm text-outline space-y-1">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="text-secondary">rationale:</span>
+<span class="text-on-surface truncate">Scale down candidate</span>
+</div>
+<div class="text-[9px] text-outline text-right">10:30:21 UTC (82ms)</div>
+</div>
+</div>
+<!-- Phase 03: ACT -->
+<div class="bg-surface-container rounded-lg p-space-sm flex flex-col justify-between relative group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-label-sm text-label-sm font-semibold text-outline">03 ACT</span>
+<span class="px-1.5 py-0.2 rounded bg-error-container text-error text-[10px] font-label-sm font-semibold">REJECTED</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface mb-2 leading-tight">
+            Attempting to spin down idle capacity to eliminate cost entirely.
+          </p>
+<div class="bg-surface-container-lowest rounded p-1.5 font-label-sm text-label-sm text-outline space-y-1">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="text-error">proposed:</span>
+<span class="font-mono text-error truncate max-w-[85px]">scale(replicas=0)</span>
+</div>
+<div class="text-[9px] text-error text-right">Intercepted (Policy)</div>
+</div>
+</div>
+<!-- Phase 04: VERIFY (ACTIVE) -->
+<div class="bg-surface-container rounded-lg p-space-sm flex flex-col justify-between relative shadow-[0_0_14px_1px_rgba(6,182,212,0.3)] ring-1 ring-primary bg-gradient-to-b from-surface-container to-surface-container-high">
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-1">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="font-label-sm text-label-sm font-bold text-primary">04 VERIFY</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary animate-pulse">ACTIVE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface mb-2 leading-tight">
+            Reading fresh service state after bounded action rejection.
+          </p>
+<div class="bg-surface-container-lowest rounded p-1.5 font-label-sm text-label-sm text-outline space-y-1">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="text-primary">tool:</span>
+<span class="font-mono text-primary truncate max-w-[90px]">get_service(rep...)</span>
+</div>
+<div class="text-[9px] text-primary text-right">10:30:38 UTC (Current)</div>
+</div>
+</div>
+<!-- Phase 05: ADAPT -->
+<div class="bg-surface-container rounded-lg p-space-sm flex flex-col justify-between relative group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-label-sm text-label-sm font-semibold text-outline">05 ADAPT</span>
+<span class="px-1.5 py-0.2 rounded bg-secondary-container text-on-secondary-container text-[10px] font-label-sm font-semibold">RESOLVED</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface mb-2 leading-tight">
+            Backend rejected 0 replicas. Choosing safe floor <code class="text-tertiary">(min=2)</code>.
+          </p>
+<div class="bg-surface-container-lowest rounded p-1.5 font-label-sm text-label-sm text-outline space-y-1">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="text-tertiary">adapted:</span>
+<span class="font-mono text-tertiary truncate max-w-[85px]">scale(replicas=2)</span>
+</div>
+<div class="text-[9px] text-outline text-right">10:30:41 UTC</div>
+</div>
+</div>
+<!-- Phase 06: FINISH -->
+<div class="bg-surface-container/60 rounded-lg p-space-sm flex flex-col justify-between opacity-85">
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-label-sm text-label-sm font-semibold text-outline">06 FINISH</span>
+<span class="material-symbols-outlined text-outline text-[16px]">pending</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-2 leading-tight">
+            Optimization applied cleanly. Telemetry and SLO verified safe.
+          </p>
+<div class="bg-surface-container-lowest/80 rounded p-1.5 font-label-sm text-label-sm text-outline space-y-1">
+<div class="flex items-center justify-between">
+<span>status:</span>
+<span class="font-mono text-on-surface-variant">Awaiting Finalize</span>
+</div>
+<div class="text-[9px] text-outline text-right">ETA ~4s</div>
+</div>
+</div>
+</div>
+</section>
+<!-- AI COGNITION VS DETERMINISTIC SAFETY BOUNDARY (SPLIT ARCHITECTURE) -->
+<section class="bg-surface-container-low rounded-xl p-space-md shadow-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">security</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">AI Cognition vs. Deterministic Safety Boundary</h2>
+</div>
+<div class="font-label-sm text-label-sm text-outline">
+          Architecture: <span class="text-tertiary font-semibold">Dual-Plane Closed-Loop Control</span>
+</div>
+</div>
+<!-- Split Architecture Dual Panel -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-stretch">
+<!-- Left Column: LLM Autonomous Agent -->
+<div class="lg:col-span-5 bg-surface-container rounded-lg p-space-md flex flex-col justify-between shadow-md">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">LLM AUTONOMOUS AGENT</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-mono">REASONING PLANE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Formulates real-time optimization hypotheses, evaluates cluster spend velocity, and generates action tool payloads based on runtime signals.
+            </p>
+<div class="p-space-sm bg-surface-container-lowest rounded-md space-y-1.5">
+<div class="font-label-sm text-label-sm text-outline uppercase">Generated Spec Proposal:</div>
+<div class="bg-surface-container-high p-2 rounded font-mono text-label-sm text-primary overflow-x-auto">
+                POST /v1/services/reports-worker/scale<br/>
+                Payload: {"replicas": 0, "reason": "0_rpm_idle_reduction"}
+              </div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container-high flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Agent Confidence: <strong class="text-primary font-mono">98.4%</strong></span>
+<span>Temperature: <strong class="text-outline font-mono">0.1</strong></span>
+</div>
+</div>
+<!-- Center Interactive Flow / Vector Arrow -->
+<div class="lg:col-span-2 flex flex-col items-center justify-center p-space-sm gap-2 text-center bg-surface-container-lowest rounded-lg">
+<div class="text-primary font-mono text-label-sm font-semibold">INTERCEPTOR</div>
+<div class="w-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[32px] hidden lg:block animate-pulse">arrow_forward</span>
+<span class="material-symbols-outlined text-[32px] lg:hidden animate-pulse">arrow_downward</span>
+</div>
+<span class="font-label-sm text-label-sm text-error bg-error-container/30 px-2 py-1 rounded font-mono">
+            REJECTED 0 REPLICAS
+          </span>
+<div class="w-full flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[32px] hidden lg:block">subdirectory_arrow_left</span>
+<span class="material-symbols-outlined text-[32px] lg:hidden">subdirectory_arrow_right</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary/10 px-2 py-0.5 rounded font-mono">
+            ADAPTED -&gt; 2
+          </span>
+</div>
+<!-- Right Column: Deterministic Safety Boundary -->
+<div class="lg:col-span-5 bg-surface-container rounded-lg p-space-md flex flex-col justify-between shadow-md">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold">SAFETY BOUNDARY</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-tertiary/15 text-tertiary font-mono">OPA POLICY ENGINE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Zero-trust policy gateway executes non-negotiable enterprise constraints. Blocks destructive action vectors before Kubernetes API execution.
+            </p>
+<!-- Policy Checklist Matrix -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs font-label-sm text-label-sm">
+<div class="p-2 rounded bg-surface-container-lowest flex items-center justify-between">
+<span class="text-on-surface-variant">MIN CAPACITY</span>
+<span class="text-error font-bold px-1.5 py-0.5 rounded bg-error-container/40">REJECTED (min=2)</span>
+</div>
+<div class="p-2 rounded bg-surface-container-lowest flex items-center justify-between">
+<span class="text-on-surface-variant">MAX CAPACITY</span>
+<span class="text-tertiary font-bold">PASS (&lt;=12)</span>
+</div>
+<div class="p-2 rounded bg-surface-container-lowest flex items-center justify-between">
+<span class="text-on-surface-variant">LATENCY SLO</span>
+<span class="text-tertiary font-bold">PASS (&lt;250ms)</span>
+</div>
+<div class="p-2 rounded bg-surface-container-lowest flex items-center justify-between">
+<span class="text-on-surface-variant">ERROR RATE</span>
+<span class="text-tertiary font-bold">PASS (0.00%)</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container-high flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Enforcement: <strong class="text-tertiary font-mono">STRICT_ZERO_OUTAGE</strong></span>
+<span>Latency: <strong class="text-on-surface font-mono">1.2ms</strong></span>
+</div>
+</div>
+</div>
+<!-- Prominent Safety Event Alert Banner -->
+<div class="bg-surface-container-lowest rounded-lg p-space-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm shadow-inner">
+<div class="flex items-start md:items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-error-container/40 text-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">shield_with_heart</span>
+</div>
+<div>
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-label-sm text-label-sm text-error font-bold uppercase">SAFETY BOUNDARY INTERCEPT EVENT</span>
+<span class="font-mono text-outline text-[11px]">[RULE: capacity_floor_violation]</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+              Action <code class="text-error font-mono">replicas=0</code> on <code class="text-primary font-mono font-semibold">reports-worker</code> was rejected. Minimum capacity requirement (2) would be violated.
+            </p>
+</div>
+</div>
+<div class="px-space-sm py-1 rounded bg-tertiary/15 text-tertiary font-label-sm text-label-sm font-semibold shrink-0">
+          ✓ AGENT ADAPTED: scale_service(replicas=2)
+        </div>
+</div>
+</section>
+<!-- TWO-COLUMN WORKSPACE: LEFT (MONITORED CLUSTER) & RIGHT (IMPACT & AUDIT) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN (7 COLS): MONITORED CLOUD ENVIRONMENT -->
+<section class="lg:col-span-7 bg-surface-container-low rounded-xl p-space-md shadow-xl flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">cloud_sync</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">Cloud Environment</h3>
+<span class="font-label-sm text-label-sm text-outline bg-surface-container px-2 py-0.5 rounded font-mono">AWS ECS / us-east-1</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Live telemetry stream with automated staleness detection.</p>
+</div>
+<!-- Scenario C Feature: Freshness vs Stale Data Toggle/Badge -->
+<div class="bg-surface-container-lowest p-1.5 rounded-lg flex items-center gap-space-xs font-label-sm text-label-sm">
+<span class="text-outline text-[10px] uppercase">Telemetry Freshness:</span>
+<span class="px-2 py-0.5 rounded bg-tertiary/15 text-tertiary font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+              LATEST OBSERVATION USED
+            </span>
+</div>
+</div>
+<!-- Stale vs Fresh Comparative Banner (Scenario C High-Impact Callout) -->
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">history_toggle_off</span>
+<div class="text-body-sm text-on-surface">
+              Staleness Safeguard: <span class="text-outline">Historical window avoided.</span>
+</div>
+</div>
+<div class="flex items-center gap-2 font-mono text-label-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-outline line-through">08:00 UTC: 900 RPM (STALE ⚠️)</span>
+<span class="px-2 py-0.5 rounded bg-tertiary/15 text-tertiary font-semibold">10:30 UTC: 0 RPM (FRESH ⚡)</span>
+</div>
+</div>
+<!-- SERVICE CARDS LIST -->
+<div class="space-y-space-sm">
+<!-- Service Card 1: orders-api -->
+<div class="bg-surface-container rounded-lg p-space-sm hover:bg-surface-container-high transition-all flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold font-mono">orders-api</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-tertiary/10 text-tertiary font-semibold">HEALTHY ●</span>
+</div>
+<div class="font-label-sm text-label-sm text-outline">
+                Cost: <span class="text-on-surface font-bold font-mono">$18.50/hr</span>
+</div>
+</div>
+<div class="grid grid-cols-3 sm:grid-cols-6 gap-2 bg-surface-container-lowest p-2 rounded font-label-sm text-label-sm">
+<div>
+<span class="text-outline block text-[9px] uppercase">Instances</span>
+<span class="text-on-surface font-mono font-bold">6 nodes</span>
+</div>
+<div>
+<span class="text-outline block text-[9px] uppercase">CPU Load</span>
+<span class="text-on-surface font-mono">22%</span>
+</div>
+<div>
+<span class="text-outline block text-[9px] uppercase">Memory</span>
+<span class="text-on-surface font-mono">41%</span>
+</div>
+<div>
+<span class="text-outline block text-[9px] uppercase">Traffic</span>
+<span class="text-on-surface font-mono">1,200 RPM</span>
+</div>
+<div>
+<span class="text-outline block text-[9px] uppercase">Latency</span>
+<span class="text-on-surface font-mono">180 ms</span>
+</div>
+<div>
+<span class="text-outline block text-[9px] uppercase">Telemetry</span>
+<span class="text-tertiary font-mono">10:30 (Fresh)</span>
+</div>
+</div>
+</div>
+<!-- Service Card 2: reports-worker (TARGET OF ACTIVE OPTIMIZATION) -->
+<div class="bg-surface-container rounded-lg p-space-sm shadow-[0_0_12px_1px_rgba(6,182,212,0.25)] ring-1 ring-primary flex flex-col gap-space-xs relative overflow-hidden">
+<div class="absolute top-0 right-0 h-full w-1 bg-primary"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="font-headline-sm text-headline-sm text-primary font-semibold font-mono">reports-worker</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] animate-spin">autorenew</span>
+                  OPTIMIZING ⚡ (4 -&gt; 2)
+                </span>
+</div>
+<div class="font-label-sm text-label-sm text-outline">
+                Cost: <span class="text-outline line-through font-mono mr-1">$11.00/hr</span>
+<span class="text-tertiary font-bold font-mono">$5.50/hr</span>
+</div>
+</div>
+<div class="grid grid-cols-3 sm:grid-cols-6 gap-2 bg-surface-container-lowest p-2 rounded font-label-sm text-label-sm">
+<div>
+<span class="text-outline block text-[9px] uppercase">Instances</span>
+<span class="text-tertiary font-mono font-bold">4 -&gt; 2 units</span>
+</div>
+<div>
+<span class="text-outline block text-[9px] uppercase">CPU Load</span>
+<span class="text-on-surface font-mono">9% -&gt; 18%</span>
+</div>
+<div>
+<span class="text-outline block text-[9px] uppercase">Memory</span>
+<span class="text-on-surface font-mono">15% -&gt; 30%</span>
+</div>
+<div>
+<span class="text-outline block text-[9px] uppercase">Traffic</span>
+<span class="text-tertiary font-mono font-bold">0 RPM (Idle)</span>
+</div>
+<div>
+<span class="text-outline block text-[9px] uppercase">Latency</span>
+<span class="text-on-surface font-mono">0 ms</span>
+</div>
+<div>
+<span class="text-outline block text-[9px] uppercase">Telemetry</span>
+<span class="text-tertiary font-mono">10:30 (Fresh)</span>
+</div>
+</div>
+<!-- Inline active reason telemetry -->
+<div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant bg-surface-container-high/60 px-2 py-1 rounded">
+<span class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[13px]">lightbulb</span>
+                Autonomous Agent Action: Idle worker pool downscaled to guaranteed floor.
+              </span>
+<span class="font-mono text-tertiary">Saving: $5.50/hr</span>
+</div>
+</div>
+<!-- Service Card 3: auth-service -->
+<div class="bg-surface-container rounded-lg p-space-sm hover:bg-surface-container-high transition-all flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold font-mono">auth-service</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-tertiary/10 text-tertiary font-semibold">HEALTHY ●</span>
+</div>
+<div class="font-label-sm text-label-sm text-outline">
+                Cost: <span class="text-on-surface font-bold font-mono">$9.20/hr</span>
+</div>
+</div>
+<div class="grid grid-cols-3 sm:grid-cols-6 gap-2 bg-surface-container-lowest p-2 rounded font-label-sm text-label-sm">
+<div>
+<span class="text-outline block text-[9px] uppercase">Instances</span>
+<span class="text-on-surface font-mono font-bold">3 nodes</span>
+</div>
+<div>
+<span class="text-outline block text-[9px] uppercase">CPU Load</span>
+<span class="text-on-surface font-mono">14%</span>
+</div>
+<div>
+<span class="text-outline block text-[9px] uppercase">Memory</span>
+<span class="text-on-surface font-mono">28%</span>
+</div>
+<div>
+<span class="text-outline block text-[9px] uppercase">Traffic</span>
+<span class="text-on-surface font-mono">450 RPM</span>
+</div>
+<div>
+<span class="text-outline block text-[9px] uppercase">Latency</span>
+<span class="text-on-surface font-mono">45 ms</span>
+</div>
+<div>
+<span class="text-outline block text-[9px] uppercase">Telemetry</span>
+<span class="text-tertiary font-mono">10:30 (Fresh)</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- RIGHT COLUMN (5 COLS): IMPACT, COST ENGINE & AUDIT -->
+<section class="lg:col-span-5 space-y-space-md">
+<!-- OPTIMIZATION IMPACT COMPARISON (BEFORE vs AFTER) -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">compare_arrows</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">Optimization Impact</h3>
+</div>
+<span class="font-mono text-label-sm text-primary font-bold">reports-worker</span>
+</div>
+<!-- Comparison Table Matrix -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden">
+<div class="grid grid-cols-3 p-2 bg-surface-container-high text-outline font-label-sm text-label-sm uppercase">
+<span>Metric</span>
+<span>Before</span>
+<span class="text-primary font-semibold">After (Adapted)</span>
+</div>
+<div class="divide-y divide-surface-container font-label-sm text-label-sm">
+<div class="grid grid-cols-3 p-2 text-on-surface items-center">
+<span class="text-outline">Instances</span>
+<span class="text-on-surface-variant font-mono">4 replicas</span>
+<span class="text-tertiary font-mono font-bold">2 replicas (-50%)</span>
+</div>
+<div class="grid grid-cols-3 p-2 text-on-surface items-center">
+<span class="text-outline">CPU Utilization</span>
+<span class="text-on-surface-variant font-mono">9%</span>
+<span class="text-on-surface font-mono">18% (Optimal)</span>
+</div>
+<div class="grid grid-cols-3 p-2 text-on-surface items-center">
+<span class="text-outline">Memory Load</span>
+<span class="text-on-surface-variant font-mono">15%</span>
+<span class="text-on-surface font-mono">30% (Healthy)</span>
+</div>
+<div class="grid grid-cols-3 p-2 text-on-surface items-center">
+<span class="text-outline">Traffic / SLO</span>
+<span class="text-on-surface-variant font-mono">0 RPM / 0ms</span>
+<span class="text-tertiary font-mono">0 RPM / Guarded</span>
+</div>
+<div class="grid grid-cols-3 p-2 text-on-surface items-center bg-surface-container/40">
+<span class="text-on-surface font-semibold">Hourly Cost</span>
+<span class="text-error font-mono line-through">$11.00/hr</span>
+<span class="text-tertiary font-mono font-bold text-[13px]">$5.50/hr (-$5.50)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- COST SUMMARY KPI CARDS -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">payments</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">Cost Summary</h3>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary/15 px-2 py-0.5 rounded font-mono font-semibold">-14.2% TOTAL BURN</span>
+</div>
+<!-- High-contrast Financial Numbers -->
+<div class="grid grid-cols-3 gap-2">
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-outline">INITIAL TOTAL</span>
+<span class="font-headline-lg text-headline-lg text-on-surface font-mono font-bold">$38.70</span>
+<span class="font-label-sm text-label-sm text-outline">per hour</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-outline">PROJECTED POST</span>
+<span class="font-headline-lg text-headline-lg text-primary font-mono font-bold">$33.20</span>
+<span class="font-label-sm text-label-sm text-outline">per hour</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex flex-col justify-between shadow-[0_0_10px_rgba(78,222,163,0.15)]">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">HOURLY SAVINGS</span>
+<span class="font-headline-lg text-headline-lg text-tertiary font-mono font-bold">-$5.50</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">~$3,960 / month</span>
+</div>
+</div>
+<!-- Deterministic Integrity Note -->
+<div class="text-[10px] text-outline font-label-sm flex items-center gap-1.5 pt-1">
+<span class="material-symbols-outlined text-[13px] text-primary">verified_user</span>
+<span>Calculated from active simulator instance pricing. Cost metrics strictly deterministic.</span>
+</div>
+</div>
+<!-- FINAL RESULT PREVIEW & AI RATIONALE CARD -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-xl flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tertiary text-[18px]">task_alt</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Final Result Preview</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-tertiary/20 text-tertiary font-label-sm text-label-sm font-bold font-mono">
+              [SUCCESSFUL ADAPTATION]
+            </span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest space-y-2 mt-1">
+<div class="font-label-sm text-label-sm text-outline uppercase font-semibold">AI Auditor Rationale:</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+<span class="font-mono text-primary">reports-worker</span> was operating with zero incoming traffic (0 RPM) and excess node capacity. Direct shutdown attempt was intercepted by the deterministic safety boundary <span class="font-mono text-outline-variant">(min_capacity=2)</span>. The agent adapted safely by scaling to the minimum policy floor (2 instances). All latency and availability SLOs are strictly preserved.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-2 text-label-sm font-label-sm">
+<button class="text-primary hover:underline flex items-center gap-1" onclick="triggerToast('Policy Audit artifact exported to S3 bucket [finops-audit-2025]')" type="button">
+<span class="material-symbols-outlined text-[14px]">download</span> Export Audit Proof
+            </button>
+<span class="text-outline font-mono">Signed: OPA_HASH_8f29ac01</span>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Micro Interaction Toast Feedback Container -->
+<div class="fixed bottom-6 right-6 z-50 pointer-events-none transition-opacity duration-300 opacity-0" id="toast-container">
+<div class="bg-surface-container-highest text-on-surface px-space-md py-space-sm rounded-lg shadow-2xl flex items-center gap-space-sm font-label-md text-label-md border-l-4 border-primary">
+<span class="material-symbols-outlined text-primary text-[18px]">info</span>
+<span id="toast-message">Scenario updated</span>
+</div>
+</div>
+<!-- Vanilla JS for dynamic demo states and scenario switching -->
+<script>
+    const scenarios = {
+      A: {
+        name: "[A] Review & Reduce Cost",
+        prompt: "Review current services and reduce unnecessary cost without breaking latency or availability requirements.",
+        runId: "run-7c21b22c133d",
+        phase: "VERIFY",
+        status: "RUNNING / ACTIVE",
+        toast: "Demo scenario set: Review & Reduce Cost (Normal autonomous cycle)"
+      },
+      B: {
+        name: "[B] Traffic Spike",
+        prompt: "Detect sudden surge on orders-api and preemptively scale out to maintain <200ms latency SLO.",
+        runId: "run-9021ea0288f1",
+        phase: "ACT",
+        status: "SCALING UP",
+        toast: "Demo scenario set: Traffic Spike simulation (Scale up priority)"
+      },
+      C: {
+        name: "[C] Stale vs Recent Traffic",
+        prompt: "Evaluate reports-worker utilizing recent 5-min telemetry while strictly ignoring stale 08:00 UTC spikes.",
+        runId: "run-33df41b901a5",
+        phase: "INVESTIGATE",
+        status: "FRESH CHECK",
+        toast: "Demo scenario set: Freshness Safeguard (Rejecting 08:00 UTC anomaly)"
+      },
+      D: {
+        name: "[D] Failed Guardrail & Adapt",
+        prompt: "Attempt complete scale to 0 on reports-worker, verify deterministic interception, then adapt to min_replicas=2.",
+        runId: "run-41ca8e49bc33",
+        phase: "ADAPT",
+        status: "ADAPTING",
+        toast: "Demo scenario set: Hard Guardrail Trigger & Dynamic Adaptation"
+      }
+    };
+
+    let isRunning = true;
+
+    function setScenario(key) {
+      const data = scenarios[key];
+      if (!data) return;
+
+      // Update scenario buttons styling
+      ['A', 'B', 'C', 'D'].forEach(k => {
+        const btn = document.getElementById('scenario-btn-' + k);
+        if (btn) {
+          if (k === key) {
+            btn.className = "px-2.5 py-1 rounded font-label-sm text-label-sm transition-all bg-primary-container text-on-primary-container font-semibold shadow-[0_0_8px_rgba(6,182,212,0.3)]";
+          } else {
+            btn.className = "px-2.5 py-1 rounded font-label-sm text-label-sm transition-all text-on-surface-variant hover:bg-surface-container-high";
+          }
+        }
+      });
+
+      // Update inputs & metadata
+      const promptInput = document.getElementById('agent-prompt-input');
+      if (promptInput) promptInput.value = data.prompt;
+
+      const runIdEl = document.getElementById('meta-run-id');
+      if (runIdEl) runIdEl.innerText = data.runId;
+
+      const phaseEl = document.getElementById('meta-phase');
+      if (phaseEl) phaseEl.innerText = data.phase;
+
+      const statusEl = document.getElementById('meta-status');
+      if (statusEl) statusEl.innerText = data.status;
+
+      triggerToast(data.toast);
+    }
+
+    function toggleAgentRun() {
+      isRunning = !isRunning;
+      const btn = document.getElementById('run-agent-btn');
+      const icon = document.getElementById('run-btn-icon');
+      const label = document.getElementById('run-btn-label');
+      const statusEl = document.getElementById('meta-status');
+
+      if (isRunning) {
+        btn.className = "px-space-md py-2 rounded font-label-lg text-label-lg font-bold bg-primary-container text-on-primary-container hover:bg-primary transition-all flex items-center gap-space-xs shadow-[0_0_16px_rgba(6,182,212,0.45)] active:scale-95";
+        icon.className = "material-symbols-outlined text-[18px] animate-spin";
+        label.innerText = "AGENT RUNNING...";
+        if (statusEl) statusEl.innerText = "RUNNING / ACTIVE";
+        triggerToast("Autonomous agent resumed optimization loop.");
+      } else {
+        btn.className = "px-space-md py-2 rounded font-label-lg text-label-lg font-bold bg-surface-container text-on-surface hover:bg-surface-container-high transition-all flex items-center gap-space-xs active:scale-95";
+        icon.className = "material-symbols-outlined text-[18px]";
+        label.innerText = "RUN AGENT";
+        if (statusEl) statusEl.innerText = "PAUSED / IDLE";
+        triggerToast("Autonomous execution paused by operator.");
+      }
+    }
+
+    function resetPrompt() {
+      const input = document.getElementById('agent-prompt-input');
+      if (input) {
+        input.value = "";
+        input.focus();
+      }
+    }
+
+    function triggerToast(message) {
+      const container = document.getElementById('toast-container');
+      const msg = document.getElementById('toast-message');
+      if (!container || !msg) return;
+
+      msg.innerText = message;
+      container.classList.remove('opacity-0');
+      container.classList.add('opacity-100');
+
+      setTimeout(() => {
+        container.classList.remove('opacity-100');
+        container.classList.add('opacity-0');
+      }, 2600);
+    }
+  </script>
+</div></main></div></body></html>
